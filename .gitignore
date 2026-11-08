@@ -1,0 +1,22 @@
+# Editor/OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Intermediate LaTeX build files (main.bbl and main.pdf are retained)
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.blg
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/

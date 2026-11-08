@@ -1,0 +1,399 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs,mathtools}
+\usepackage{booktabs,array}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=2em,itemsep=0.3ex,topsep=0.4ex}
+\setlist[itemize]{leftmargin=2em,itemsep=0.3ex,topsep=0.4ex}
+\hypersetup{pdftitle={A Zariski-open family of proper septic polynomials with full traceless images},pdfauthor={Y. T. Miah},pdfsubject={Multilinear polynomial images, commutator ideals and repeated-input kernels},pdfkeywords={Lvov--Kaplansky conjecture, multilinear polynomial, matrix image, commutator ideal, Young subgroup, Jacobian}}
+\urlstyle{same}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\kk}{K}
+\newcommand{\Mn}[1]{M_{#1}(\kk)}
+\newcommand{\sln}[1]{\mathfrak{sl}_{#1}(\kk)}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\cyc}{\operatorname{tr}_{\mathrm{cyc}}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\Sym}{\mathfrak{S}}
+\newcommand{\Ncal}{\mathcal N}
+\newcommand{\Ucal}{\mathcal U}
+\newcommand{\E}{E}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ant}[2]{\{#1,#2\}}
+\begin{document}
+
+\title[Traceless images of proper septics]{A Zariski-open family of proper septic polynomials with full traceless images}
+\author{Y. T. Miah}
+\date{8 November 2026}
+\subjclass[2020]{16R30, 15A24, 16R10, 20C30}
+\keywords{L'vov--Kaplansky problem, multilinear polynomial images, commutator ideals, repeated-input kernels, matrix Jacobians}
+
+\begin{abstract}
+Let $K$ be an algebraically closed field of characteristic zero.  We identify a $762$-dimensional space of proper multilinear degree-seven polynomials in the third power of the commutator ideal, with zero formal cyclic trace and annihilated by every repeated-input identification of type $(3,3,1)$.  A nonempty Zariski-open subset of this space consists of polynomials $p$ whose sets of individual matrix values satisfy $p(M_n(K)^7)=\mathfrak{sl}_n(K)$ for every $n\geq3$.  The ambient proper and formal trace-zero spaces have dimensions $1260$ and $1049$, respectively.  An explicit polynomial certifies nonemptiness of this coefficient-open family.  The proof combines a symmetric-group decomposition, exact finite determinant witnesses, an additive-size argument and a separate $3\times3$ matrix argument.
+\end{abstract}
+\maketitle
+
+\section{Introduction and principal result}
+The L'vov--Kaplansky problem asks whether the values of every ordinary multilinear polynomial on a full matrix algebra form a vector subspace.  We study individual values, rather than spans or closures, for proper degree-seven polynomials in the third power of the commutator ideal.  A nonempty Zariski-open family has image $\mathfrak{sl}_n(K)$ in every order $n\ge3$.
+
+The $3\times3$ classification of Kanel-Belov, Malev and Rowen~\cite{KBR2016} is used at the smallest order.  Other relevant work includes image criteria of Fagundes and Koshlukov~\cite{FagundesKoshlukov2023}, methods of Tang~\cite{Tang2026} and Pan~\cite{Pan2026}, and the standard-polynomial classification~\cite{Miah2026}.  Higher orders are treated through regular matrix evaluations and size transfer.
+
+Fix an algebraically closed field $K$ of characteristic zero and the free unital associative algebra $F=K\langle X_0,\ldots,X_6\rangle$.  Let $J=[F,F]_{\mathrm{ideal}}$ be the commutator ideal.
+
+A multilinear polynomial is \emph{proper} if setting any one input equal to the identity makes it vanish.  Define
+\begin{equation}\label{eq:spaces}
+\begin{aligned}
+ W&=(J^3)_7^{\mathrm{mult}}\cap\{\text{proper polynomials}\},\\
+ V&=W\cap\ker\cyc,\\
+ K_{331}&=\bigcap_{\rho\in\mathscr R_{331}}\ker(\rho\vert_V).
+\end{aligned}
+\end{equation}
+Here $\cyc$ is the formal map recording sums of coefficients in the cyclic classes of seven-letter words; in particular $\cyc(p)=0$ implies $\tr p(A_0,\ldots,A_6)=0$ for every matrix size.  The set $\mathscr R_{331}$ consists of \emph{every} assignment of the seven labelled slots to three named inputs, with multiplicities three, three, and one.  Its kernel in~\eqref{eq:spaces} is not the kernel of one particular substitution.
+
+For a polynomial $p$ and $n\geq1$, write
+\[
+ \im_n(p)=\{p(A_0,\ldots,A_6): A_i\in M_n(K)\}.
+\]
+All equalities of images below refer to this set of \emph{single} evaluations.
+
+\begin{theorem}[Coefficient-open image theorem]\label{thm:main}
+The spaces in~\eqref{eq:spaces} have dimensions
+\[
+ \dim_K W=1260,\qquad \dim_K V=1049,\qquad \dim_K K_{331}=762.
+\]
+There exists one nonempty Zariski-open subset $\Ucal$ of the affine coefficient space $K_{331}$ such that
+\begin{equation}\label{eq:main-image}
+ \im_n(p)=\mathfrak{sl}_n(K)\qquad
+ \text{for every }p\in\Ucal\text{ and every integer }n\geq3.
+\end{equation}
+The open set can be described by the nonvanishing of an explicit homogeneous coefficient polynomial of degree $76$ obtained from fixed integral matrix data.
+\end{theorem}
+
+The subset $\Ucal$ is independent of $n$, so each $p\in\Ucal$ has the stated image in every order $n\ge3$.
+
+\section{The proper septic space and the common kernel}\label{sec:module}
+All dimensions in this section are over $K$.  We use the natural action of the symmetric group $\Sym_7$ by permuting variable labels.
+
+\subsection{A concrete basis and the cyclic-trace kernel}
+For each three-element set $\{a,b,c\}$, $a<b<c$, take the two cubic Lie words
+\[
+ [[X_a,X_b],X_c],\qquad [[X_a,X_c],X_b].
+\]
+Partition the four complementary labels into unordered pairs, form the commutator for each pair, and order these three factors in all six ways.  The resulting family $\mathscr B$ consists of $1260$ polynomials, since
+\begin{equation}\label{eq:1260}
+ \binom73\cdot2\cdot3\cdot3!=1260.
+\end{equation}
+
+\begin{proposition}\label{prop:basis}
+The family $\mathscr B$ is a basis of $W$.  The formal cyclic-trace map on $W$ has rank $211$ over $\mathbb Q$ and hence over $K$.  In particular, $\dim W=1260$ and $\dim V=1049$.
+\end{proposition}
+\begin{proof}
+In multilinear total degree seven, a product of three factors from $J$ consists, after standard commutator expansion, of three simple commutators and one additional labelled letter, either occurring as an external letter or inside a cubic commutator.  Moving any external letter through the simple commutators, using $X[A,B]=[A,B]X-[\,[A,B],X\,]$, expresses such a product as a sum of a term $X_i g_i$, where $g_i$ is a product of three disjoint simple commutators, and terms with one cubic Lie factor and two disjoint simple commutators.  By the Jacobi identity, each cubic factor lies in the span of the two displayed Lie words.  Thus every multilinear element of $J^3$ has an expression
+\[
+ \sum_{i=0}^6 X_i g_i+w,\qquad w\in\Span_K\mathscr B.
+\]
+Every element of $\mathscr B$ is proper.  Substituting $X_i=I$ into a proper expression leaves $g_i$, while the other external-letter terms and $w$ vanish.  Hence properness forces all $g_i=0$, proving spanning.
+
+Independence is certified by reducing the $1260$ coefficient rows in the ordinary seven-letter word basis modulo $32003$: their rank is $1260$.  Because there are exactly $1260$ proposed generators, nonzero maximal rank modulo a prime proves independence over $\mathbb Q$ and over every characteristic-zero field.  The cyclic trace has $7!/7=720$ cyclic-word columns.  Exact sparse rational elimination on the $1260\times720$ cyclic coefficient matrix gives rank $211$; a separate modular elimination on the same coefficient data also gives $211$.  The explicit generators, reductions and reproducibility details are supplied in Appendix~\ref{app:verification}.  The rank assertion in characteristic zero follows directly from the exact rational calculation.
+\end{proof}
+
+\subsection{Why all \texorpdfstring{$(3,3,1)$}{(3,3,1)} assignments matter}
+The basis identifies the $\Sym_7$-module
+\begin{equation}\label{eq:induced}
+ W\simeq 3\,\operatorname{Ind}_{\Sym_3\times\Sym_2\times\Sym_2}^{\Sym_7}
+ \bigl(\operatorname{Lie}(3)\boxtimes\operatorname{sgn}\boxtimes\operatorname{sgn}\bigr).
+\end{equation}
+Here $\operatorname{Lie}(3)$ is the two-dimensional multilinear Lie module, and the factor $3$ records the possible positions of the cubic factor among three products.  The module interpretation and its character use standard free-Lie and symmetric-group representation theory; see~\cite{Reutenauer1993}.
+
+Let $H=\Sym_{\{0,2,4\}}\times\Sym_{\{1,3,5\}}\times\Sym_{\{6\}}$.  A fixed identification $\rho_0$ taking $X_0,X_2,X_4$ to $A$, $X_1,X_3,X_5$ to $B$, and $X_6$ to $Z$ satisfies $\rho_0(p)=0$ exactly when the average of $p$ over $H$ is zero: polarization recovers the invariant multilinear component in these repeated slots.  All other assignments are obtained by permuting the variable slots.  Thus
+\begin{equation}\label{eq:common-avg}
+ K_{331}=\bigcap_{g\in\Sym_7}\ker\bigl(e_H\,g^{-1}\vert_V\bigr),
+ \qquad e_H=\frac{1}{|H|}\sum_{h\in H}h.
+\end{equation}
+On each simple $\Sym_7$-constituent $S^\lambda$, the intersection in~\eqref{eq:common-avg} is either all of $S^\lambda$ or zero by invariance and irreducibility; it is all precisely when $(S^\lambda)^H=0$.  This applies to each multiplicity copy.
+
+\Needspace{5\baselineskip}
+Computing the character of~\eqref{eq:induced}, subtracting the character of the cyclic-trace quotient, and taking irreducible character inner products gives the following complete decomposition data.  The last column is $\dim(S^\lambda)^H$, obtained by $|H|^{-1}\sum_{h\in H}\chi^\lambda(h)$.
+\begin{table}[ht]
+\centering
+\caption{Irreducible constituents of $V$ and their $H$-invariants.}\label{tab:irreps}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+$\lambda$ & $\dim S^\lambda$ & multiplicity in $V$ & $\dim(S^\lambda)^H$\\
+\midrule
+$(4,3)$&14&3&2\\
+$(4,2,1)$&35&4&1\\
+$(4,1,1,1)$&20&3&0\\
+$(3,3,1)$&21&5&1\\
+$(3,2,2)$&21&5&0\\
+$(3,2,1,1)$&35&10&0\\
+$(3,1,1,1,1)$&15&5&0\\
+$(2,2,2,1)$&14&6&0\\
+$(2,2,1,1,1)$&14&5&0\\
+$(2,1,1,1,1,1)$&6&3&0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proposition}[Common repeated-input kernel]\label{prop:common}
+A single fixed $(3,3,1)$ identification has rank $15$ on $V$ and kernel dimension $1034$.  The common kernel over \emph{all} assignments satisfies
+\[
+ \dim K_{331}=1049-(3\cdot14+4\cdot35+5\cdot21)=762.
+\]
+\end{proposition}
+\begin{proof}
+Table~\ref{tab:irreps} and~\eqref{eq:common-avg} show that exactly the three isotypic constituents with positive $H$-invariant dimension are removed by intersecting all the conjugate kernels.  Their total dimension is $42+140+105=287$, proving the common dimension $762$.  For one fixed assignment the image dimension instead equals the dimension of the $H$-invariant subspace of $V$, namely $3\cdot2+4\cdot1+5\cdot1=15$.  Direct repeated-word substitution gives the same rank.
+
+For reproducibility, the trace-image character is computed on the cyclic-trace row space modulo $32003$; the induced-module character is computed from~\eqref{eq:induced}.  These modular character residues determine the exact characteristic-zero values: the trace image is a $211$-dimensional rational representation, so each character value is an integer of absolute value at most $211$, well within the unique centered residue interval modulo $32003$.  Exact character inner products then give Table~\ref{tab:irreps}.  Irreducibility gives the intersection over every identification.
+\end{proof}
+
+\Needspace{4\baselineskip}
+\section{A border differential criterion and size transfer}\label{sec:border}
+Fix an ordinary multilinear polynomial in $m+1$ variables, denoted $p(X_0,\ldots,X_{m-1},Y)$, with distinguished last input $Y$.  Later $m=6$ and $Y=X_6$.  The following normal-map and size-transfer construction adapts the standard-polynomial method of~\cite[Lemma~11.1 and Theorem~11.3]{Miah2026} to a general multilinear polynomial.  We record the normal equations and their implications for individual polynomial values.
+
+Fix $B=(B_0,\ldots,B_{m-1})\in M_N(K)^m$ and $u\in K^N$.  In the following sums, $w=aYb$ denotes an ordinary word with coefficient $c_w$, and $a(B)$, $b(B)$ are ordered products (empty products are $I_N$).  Put
+\begin{align}
+ R_B&=\sum_{w=aY}c_w a(B),\qquad
+ Q_B=\sum_{w=Yb}c_w b(B),\label{eq:endpoints}\\
+ L_B(Z)&=p(B,Z),\qquad
+ L_B^*(P)=\sum_{w=aYb}c_w b(B)P a(B),\label{eq:Lstar}\\
+ T_{B,i}(P)&=\sum_{w=aY X_i b}c_w b(B)P a(B),\label{eq:T-map}\\
+ \Gamma^0_{B,u}(P)&=\bigl(L_B^*(P),\,T_{B,0}(P)u,\ldots,
+ T_{B,m-1}(P)u\bigr).\label{eq:gamma}
+\end{align}
+The condition $w=aYX_i b$ specifies \emph{adjacent} occurrences of $Y,X_i$.  The trace pairing $\tr(P\,L_B(Z))=\tr(L_B^*(P)Z)$ fixes the order of the factors in~\eqref{eq:Lstar}.  In~\eqref{eq:gamma}, $\Gamma^0_{B,u}:M_N\to M_N\oplus(K^N)^m$ is a matrix with $N^2$ columns and $N^2+mN$ rows after choosing matrix-unit bases.
+
+\begin{lemma}[Regular rank-one value]\label{lem:border}
+Suppose $p$ has formal cyclic trace zero, $R_B$ and $Q_B$ are invertible, and $\Gamma^0_{B,u}$ is injective.  Then
+\[
+ \im_{N+1}(p)=\mathfrak{sl}_{N+1}(K).
+\]
+In fact, the differential of the $(m+1)$-input evaluation map is surjective onto $\mathfrak{sl}_{N+1}$ at an input whose value is nonzero, square-zero and rank one.
+\end{lemma}
+\begin{proof}
+Use the enlarged matrices
+\[
+ A_i=\begin{pmatrix}B_i&0\\0&0\end{pmatrix},
+ \qquad Y_*=\begin{pmatrix}0&u\\0&0\end{pmatrix}.
+\]
+Only words ending in $Y$ survive, so
+\[
+ p(A_0,\ldots,A_{m-1},Y_*)=
+ \begin{pmatrix}0&R_Bu\\0&0\end{pmatrix}.
+\]
+Since the formal trace vanishes, $L_B^*(I_N)=0$.  If $u=0$, the identity matrix would lie in $\ker\Gamma^0_{B,u}$, contrary to injectivity.  Therefore $u\ne0$ and the displayed value is a nonzero rank-one square-zero matrix.
+
+We compute the differential normal using the trace pairing.  Variations of the top-right and bottom-left blocks of $Y$ give $v\mapsto R_Bv$ and $c\mapsto cQ_B$, respectively.  Their invertibility forces the normal to be block diagonal, $\operatorname{diag}(P,s)$.  Since the differential takes values in $\mathfrak{sl}_{N+1}(K)$, subtracting a scalar normal sets $s=0$ without changing its class.
+
+\Needspace{7\baselineskip}
+A variation $Y\mapsto\operatorname{diag}(Z,0)$ gives the old-block equation $L_B^*(P)=0$.  A lower-left row variation in one $A_i$ can contribute an old-block diagonal term precisely when $Y$ is immediately followed by that occurrence of $X_i$.  Its trace pairing with $P$ is the row paired against $T_{B,i}(P)u$.  Possible contributions to the bottom-right scalar equation disappear after the scalar-normal normalization.  All remaining variations vanish against the normalized diagonal normal or lie in already controlled off-diagonal blocks.  Hence the normalized normal equations are exactly
+\[
+ L_B^*(P)=0,\qquad T_{B,i}(P)u=0\quad(0\le i<m).
+\]
+Their only solution is $P=0$ by injectivity, and the differential is surjective onto $\mathfrak{sl}_{N+1}$.
+
+Surjectivity of this differential at the attained rank-one square-zero value implies \emph{actual} surjectivity.  The source and target affine spaces are smooth, so the evaluation morphism is smooth at this input and its image contains a Zariski-open neighborhood of that value.  The image is invariant under simultaneous conjugation and, by multilinearity, under multiplication by any nonzero scalar.  For any nonscalar $T\in\mathfrak{sl}_{N+1}$, choose a basis with $T_{12}\ne0$.  The curve
+\[
+ t\longmapsto t^2D(t)T D(t)^{-1},\qquad
+ D(t)=\operatorname{diag}(t^{-1},t,1,\ldots,1),
+\]
+extends regularly to $t=0$ with value $T_{12}E_{12}$.  Conjugating and rescaling the open neighborhood to one of this rank-one matrix, the curve meets it at some $t\ne0$, since $K$ is infinite.  Thus $T$ itself belongs to the image.  Zero is obtained by setting one input to zero.  Hence every traceless matrix is attained by a single evaluation of $p$.
+\end{proof}
+
+\begin{definition}\label{def:admissible}
+For a fixed $p$ and the same distinguished slot $Y$, a positive integer $N$ is \emph{admissible} if some pair $(B,u)$ of size $N$ satisfies the three conditions of Lemma~\ref{lem:border}.
+\end{definition}
+
+\begin{lemma}[Additive-size transfer]\label{lem:add}
+For the same polynomial $p$ and the same slot $Y$, the set of admissible core sizes is closed under addition.  Thus, if $3,4,5$ are admissible for $p$, then every core size $N\geq3$ is admissible.
+\end{lemma}
+\begin{proof}
+Take witnesses $(A,u_a)$ and $(C,u_b)$ of core sizes $a,b$.  In the same variables set
+\[
+ B_i(t)=\operatorname{diag}(A_i,tC_i),\qquad u=(u_a,u_b)^t.
+\]
+For nonzero $t$, the endpoint matrices of~\eqref{eq:endpoints} are block diagonal with blocks $R_A,t^mR_C$ and $Q_A,t^mQ_C$, so both remain invertible.
+
+The map $L_{B(t)}^*$ preserves each of the four matrix blocks.  At $t=0$, the two mixed-block restrictions of $L_{B(t)}^*$ are invertible: they are adjoint to $X\mapsto R_AX$ and $X\mapsto XQ_A$ on the corresponding rectangular spaces.  Each determinant is a nonzero polynomial in $t$, and so one may choose a common $t\ne0$ for which both mixed restrictions remain invertible.
+
+\Needspace{6\baselineskip}
+If $\Gamma^0_{B(t),u}(P)=0$, the first component $L_{B(t)}^*(P)=0$ now forces both mixed blocks of $P$ to vanish.  The remaining diagonal equations split into the $a$-core equations and the $b$-core equations, scaled in the second block by the nonzero powers $t^m$ for $L^*$ and $t^{m-1}$ for each $T_i$.  Injectivity at both cores forces the two diagonal blocks of $P$ to vanish.  This constructs one larger witness for the \emph{same} $p$, using one tuple $B(t)$ and one parameter $t$.
+
+Every integer $N\ge6$ is a sum of $3$, $4$, and $5$, as is clear by induction from $6,7,8$; the assertion for $N=3,4,5$ is the hypothesis.  Repeated application proves the last claim.
+\end{proof}
+
+\section{An explicit polynomial and three regular cores}\label{sec:cores}
+For $r\geq1$ let $s_r(X_0,\ldots,X_{r-1})$ be the unnormalized alternating sum over $\Sym_r$.  Define
+\begin{equation}\label{eq:q0}
+ q_0=[\,s_4(X_0,X_1,X_2,X_3)[X_4,X_5],\,X_6\,].
+\end{equation}
+The standard identity
+\begin{align*}
+ s_4(X_0,X_1,X_2,X_3)={}&\ant{[X_0,X_1]}{[X_2,X_3]}
+ -\ant{[X_0,X_2]}{[X_1,X_3]}\\
+ &+\ant{[X_0,X_3]}{[X_1,X_2]},\qquad \{A,B\}=AB+BA,
+\end{align*}
+shows that $s_4\in J^2$; hence $q_0\in J^3$.  Each variable enters a commutator, so $q_0$ is proper, and its outer commutator gives $\cyc(q_0)=0$.  Among four alternating inputs $X_0,\ldots,X_3$ some two coincide under every three-value assignment, so every $(3,3,1)$ restriction vanishes.  Thus
+\begin{equation}\label{eq:q0kernel}
+ q_0\in K_{331}.
+\end{equation}
+
+The verification data specify integer $B_0,\ldots,B_5\in M_N(\mathbb Z)$ and $u\in\mathbb Z^N$ for each $N=3,4,5$, together with a prescribed $N^2$-row square minor of the complete normal matrix~\eqref{eq:gamma}.  Write $\delta_N(p)$ for the product of the two endpoint determinants and this fixed normal minor, calculated with \emph{the same} integral inputs and rows but with $p$ in place of $q_0$.  Then
+\begin{equation}\label{eq:degree}
+ \deg\delta_N=2N+N^2,
+ \qquad
+ \Delta_{\mathrm{core}}=\delta_3\delta_4\delta_5,
+ \qquad \deg\Delta_{\mathrm{core}}=15+24+35=74.
+\end{equation}
+Every determinant here is a polynomial in the ordinary coefficients of $p$, and so restricts to a polynomial on $K_{331}$.
+
+\begin{table}[ht]
+\centering
+\caption{Exact border certificates for $q_0$ modulo $101$.}\label{tab:cores}
+\small
+\begin{tabular}{@{}rrrrrrrr@{}}
+\toprule
+$N$ & target $n$ & $\det R$ & $\det Q$ & $\Gamma^0$ size & rank & minor & degree\\
+\midrule
+3&4&25&76&$27\times9$&9&8&15\\
+4&5&4&4&$40\times16$&16&91&24\\
+5&6&15&86&$55\times25$&25&37&35\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\Needspace{10\baselineskip}
+\begin{proposition}[Nonzero seed certificates]\label{prop:seed}
+The coefficient polynomial $\Delta_{\mathrm{core}}\vert_{K_{331}}$ is not identically zero.  Every $p\in K_{331}$ for which $\Delta_{\mathrm{core}}(p)\ne0$ has
+\[
+ \im_n(p)=\mathfrak{sl}_n(K)\qquad\text{for every }n\ge4.
+\]
+\end{proposition}
+\begin{proof}
+The reproducible algorithm selects the rows of $\delta_N$; their zero-based indices appear in \mbox{\texttt{results/deep\_minors.json}}.  Table~\ref{tab:cores} gives the computed endpoint determinants, the full normal ranks, and the chosen normal-minor determinants modulo $101$ at $q_0$.  Each residue is nonzero.  Since the inputs and $q_0$ have integral coefficients, the corresponding integer determinants are therefore nonzero.  By~\eqref{eq:q0kernel}, $\Delta_{\mathrm{core}}$ is nonzero on $K_{331}$.
+
+For any $p$ on this nonvanishing locus, the same determinant conditions give three admissible cores of orders $3,4,5$.  Lemma~\ref{lem:add} transfers admissibility to every $N\ge3$ \emph{for that same $p$}; Lemma~\ref{lem:border} then proves the asserted actual images in all orders $n=N+1\ge4$.
+\end{proof}
+
+The full original-variable Jacobians were separately computed by word differentiation at the same three enlarged inputs, using the same $q_0$ word coefficients.  Their ranks modulo $101$ are respectively $15,24,35$, equal to $\dim\mathfrak{sl}_n$ for $n=4,5,6$.  These computations check the full differential on the recorded examples; Lemma~\ref{lem:add} supplies every larger size.  A direct mixed-block check also joins the $N=3$ and $N=4$ witnesses at $t=1$ into a core of size $7$.
+
+\section{The separate \texorpdfstring{$3\times3$}{3-by-3} argument}\label{sec:m3}
+The border certificates above begin at $n=4$.  We treat the $3\times3$ case using a diagonal-slice argument.
+
+Let $E_{ij}$ ($0\le i,j\le2$) be the standard matrix units in $M_3(K)$, and fix the seven-input tuple
+\begin{equation}\label{eq:frozen-tuple}
+ \boldsymbol a=(E_{00},E_{01},E_{02},E_{20},E_{10},E_{01},E_{10}).
+\end{equation}
+The directed multigraph associated with these seven matrix-unit factors is balanced at each vertex.  Any nonzero ordered product is a directed trail traversing all seven edges and therefore a closed trail; its value is diagonal.  Thus for $p\in W$ (indeed for any ordinary multilinear septic) the value
+\[
+ D(p)=p(\boldsymbol a)
+\]
+is diagonal.  For $p\in V$ its trace vanishes.  Consider the quadratic coefficient polynomial
+\begin{equation}\label{eq:Q3}
+ Q_3(p)=\tr\bigl(D(p)^2\bigr).
+\end{equation}
+Direct exact matrix-unit evaluation gives
+\begin{equation}\label{eq:diag-witness}
+ D(q_0)=\operatorname{diag}(2,-2,0),\qquad Q_3(q_0)=8.
+\end{equation}
+
+\Needspace{7\baselineskip}
+\begin{lemma}[A two-dimensional multilinear slice]\label{lem:slice}
+Let $F:U_1\times\cdots\times U_r\to T$ be a multilinear map over an infinite field, where $\dim T=2$.  If the linear span of its individual values is $T$, then one can fix all but one input in such a way that the remaining linear map is onto $T$.  Consequently, the set of individual values of $F$ equals $T$.
+\end{lemma}
+\begin{proof}
+Suppose every one-coordinate slice has rank at most one.  Choose tuples $a,b$ such that $F(a),F(b)$ are independent.  The independence condition is a nonempty Zariski-open condition on pairs of tuples.  Since $F$ is nonzero, the condition that each of the finitely many $2^r$ mixed tuples (choosing in each coordinate the value from $a$ or $b$) have nonzero image is also a nonempty open condition.  The product of the input affine spaces is irreducible; hence a pair $(a,b)$ satisfies both conditions simultaneously.
+
+Connect $a$ to $b$ by successively changing one coordinate at a time.  Two consecutive nonzero values lie in the same one-dimensional slice image and are therefore proportional.  Repetition makes $F(a)$ and $F(b)$ proportional, a contradiction.  Thus a one-coordinate slice has rank two; varying that coordinate produces every element of $T$ as a single value.
+\end{proof}
+
+\begin{lemma}[Every traceless diagonal is attained]\label{lem:diagonal}
+If $p\in V$ and $Q_3(p)\ne0$, then every trace-zero diagonal $3\times3$ matrix belongs to $\im_3(p)$.
+\end{lemma}
+\begin{proof}
+Use the cyclic diagonal $\mathbb Z/3\mathbb Z$-grading
+\[
+ M_3(K)=\bigoplus_{d\in\mathbb Z/3\mathbb Z}G_d,
+ \qquad G_d=\Span\{E_{i,i+d}:i\in\mathbb Z/3\mathbb Z\}.
+\]
+The seven entries of~\eqref{eq:frozen-tuple} have degrees
+\[
+ (0,1,2,1,2,1,2),
+\]
+whose sum is zero modulo three.  Restrict the $i$th input of $p$ to its corresponding $G_{d_i}$.  All products, and hence every value of the resulting multilinear map, lie in $G_0$, the diagonal subspace.  Since $p\in V$, these values are trace zero.  Thus we have a multilinear map into the two-dimensional space
+\[
+ T=\{\operatorname{diag}(a,b,c):a+b+c=0\}.
+\]
+Its image contains $D(p)$.  Simultaneously conjugating the fixed tuple by the cyclic permutation matrix keeps each input inside the \emph{same} $G_{d_i}$ and yields a cyclic rotation $CD(p)C^{-1}$ of this diagonal value.
+
+If these two vectors of $T$ were proportional, then $D(p)$ would lie in an eigenline of the cyclic rotation operator on $T$.  Over algebraically closed characteristic zero, those eigenlines are spanned by $(1,\omega,\omega^2)$ and $(1,\omega^2,\omega)$, with $\omega^3=1$ and $\omega\ne1$.  Both have $\tr(D^2)=0$, contradicting $Q_3(p)\ne0$.  Hence the multilinear map spans $T$, and Lemma~\ref{lem:slice} realizes every member of $T$ by a single tuple of inputs.
+\end{proof}
+
+\Needspace{8\baselineskip}
+\begin{proposition}[Completion at order three]\label{prop:three}
+If $p\in V$ and $Q_3(p)\ne0$, then
+\[
+ \im_3(p)=\mathfrak{sl}_3(K).
+\]
+\end{proposition}
+\begin{proof}
+The image is contained in $\mathfrak{sl}_3(K)$ because $\cyc(p)=0$.  Theorem~2 of Kanel-Belov--Malev--Rowen~\cite{KBR2016} classifies the images of multilinear polynomials on $M_3(K)$ as zero, scalars, $\mathfrak{sl}_3$ \emph{possibly lacking diagonalizable matrices of discriminant zero}, a dense subset of $M_3$, the $3$-scalar matrices, or scalars together with $3$-scalar matrices.  The traceless alternative permits this possible exception.
+
+Our value $D(p)$ is nonzero and satisfies $\tr(D(p)^2)\ne0$.  Since every value has trace zero, the scalar alternative (apart from zero), the traceful dense-$M_3$ alternative, and the corresponding scalar-plus-$3$-scalar alternative are excluded.  For a $3$-scalar matrix the three eigenvalues are $\beta,\beta\omega,\beta\omega^2$; their squares sum to zero, so $Q_3(p)\ne0$ also excludes the $3$-scalar alternative.  Consequently the Kanel-Belov--Malev--Rowen theorem places the image in its traceless alternative.
+
+Lemma~\ref{lem:diagonal} supplies \emph{all} trace-zero diagonal matrices as actual values, including the potentially excluded diagonalizable discriminant-zero cases (those similar to $\operatorname{diag}(c,c,-2c)$).  Similarity invariance fills their conjugacy classes.  The remaining traceless Jordan forms already lie in the traceless alternative of the cited theorem.  Thus no exceptional class remains and $\im_3(p)=\mathfrak{sl}_3(K)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The dimension statements were proved in Section~\ref{sec:module}.  With the integral input tuples, endpoint determinants and normal minors fixed in Section~\ref{sec:cores}, define
+\begin{equation}\label{eq:U}
+ \Ucal=\{p\in K_{331}:\Delta_{\mathrm{core}}(p)Q_3(p)\ne0\}.
+\end{equation}
+Both factors are polynomial in the coefficients of $p$.  Their degrees are $74$ and $2$, so their product has homogeneous degree $76$.  Equations~\eqref{eq:q0kernel}, the nonzero residues in Table~\ref{tab:cores}, and~\eqref{eq:diag-witness} show that this polynomial is nonzero at $q_0\in K_{331}$.  Thus $\Ucal$ is a nonempty coefficient-Zariski-open subset.  Proposition~\ref{prop:seed} yields the actual full traceless image at every $n\ge4$, for each fixed $p\in\Ucal$; Proposition~\ref{prop:three} supplies $n=3$ for the same $p$.  This proves~\eqref{eq:main-image}.
+\end{proof}
+
+The full-image equality for the particular polynomial $q_0=[h_6,X_6]$, where $h_6=s_4(X_0,\ldots,X_3)[X_4,X_5]$, also follows from earlier results.  Indeed, the matrix-unit evaluation
+\[
+ \tr h_6(E_{00},E_{01},E_{12},E_{20},E_{01},E_{10})=-1
+\]
+shows that $h_6$ has nonzero formal cyclic trace.  Pan's degree-six classification~\cite[Theorem~A]{Pan2026} therefore gives $\im_n(h_6)=M_n(K)$ for $n\ge3$; the classical single-commutator theorem~\cite{AlbertMuckenhoupt1957} then gives $\im_n(q_0)=\mathfrak{sl}_n(K)$.  In Theorem~\ref{thm:main}, $q_0$ serves to certify nonemptiness of the coefficient-open family.
+
+\section{Relation to earlier image methods}\label{sec:context}
+The smooth rank-one image criterion used in Section~\ref{sec:border} appears in Pan's work~\cite[Lemma~1.7 and Corollary~1.8]{Pan2026} and in the standard-polynomial setting~\cite[Lemma~9.1]{Miah2026}.  The present border construction accommodates general septic words through distinct endpoint operators $R_B,Q_B$ and the adjacent-word normal maps $T_{B,i}$.  Tang's degree-five and degree-six methods~\cite{Tang2026} provide further context.
+
+Fagundes and Koshlukov~\cite[Theorem~5.2]{FagundesKoshlukov2023} give a sufficient graded-identity criterion for the image of a multilinear polynomial to contain all traceless matrices.  It requires that the specialization with all but one variable of neutral degree remain outside the graded $T_{\mathbb Z}$-ideal generated by $[y_1,y_2]$ for every non-neutral degree assigned to the remaining variable.  For the present proper septics in $J^3$, every such specialization vanishes on diagonal neutral inputs, since three commutator-ideal factors cannot survive when only one input is non-diagonal.  The regular border evaluations here provide a different sufficient condition.  The representation and cyclic-trace bookkeeping draw on classical free-Lie methods~\cite{Reutenauer1993}; full images follow from the additional regularity and $M_3$ arguments.
+
+\appendix
+\section{Exact finite records and reproduction}\label{app:verification}
+The source archive accompanying this manuscript includes \texttt{code/}, \texttt{data/}, \texttt{results/}, \texttt{requirements.txt} and \texttt{run\_checks.sh}.  The complete fixed matrices and column vectors for the three seed sizes are stored in \path{data/deep_core_inputs.json}; all coefficient expansions used for these certificates are reconstructed directly in the scripts.  The scripts use Python~3 with the NumPy dependency specified in \path{requirements.txt}.  From the archive root, install those requirements and run \texttt{bash run\_checks.sh}.
+
+The scripts have distinct tasks.  \path{code/verify_septic_trace.py} expands all $1260$ generators, checks their word independence modulo $32003$ and computes the cyclic-trace rank $211$ by exact rational sparse elimination and by reduction modulo $32003$.  \path{code/verify_rep_filtration.py} computes the induced and trace-image characters, irreducible multiplicities and Young-subgroup fixed spaces that give the common-kernel dimension $762$.  \path{code/verify_deep_minors.py} expands the $96$ ordinary words of $q_0$, reconstructs $R_B,Q_B,L_B^*,T_{B,i}$, chooses and records explicit rows for the three $N^2$-column minors, and checks the nonzero residues of Table~\ref{tab:cores}.  The selected rows and residues are recorded in \path{results/deep_minors.json}.  It also checks a sample combined size-$7$ core.  \path{code/verify_deep_jacobians.py} differentiates the \emph{full} seven-input matrix evaluation to check the rank $n^2-1$ at $n=4,5,6$, and \path{code/verify_deep_m3.py} checks~\eqref{eq:frozen-tuple}--\eqref{eq:diag-witness} by exact matrix-unit arithmetic.
+
+\Needspace{6\baselineskip}
+The certificates use fixed integer data.  Each nonzero minor modulo $101$ certifies a nonzero integer determinant; the reported residues are reduced values, not the unreduced determinants.  The proof for every matrix order combines these finite seed certificates with the representation-theoretic, additive-size and diagonal-slice arguments.
+
+\Needspace{5\baselineskip}
+\section*{Use of AI}
+OpenAI's GPT-6 Pro contributed substantially to mathematical development, computational verification, source analysis, and the preparation of this manuscript.  The author directed the work and retains responsibility for the mathematical claims and their presentation.
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

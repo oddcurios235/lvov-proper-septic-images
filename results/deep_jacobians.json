@@ -1,0 +1,26 @@
+{
+  "prime": 101,
+  "cases": [
+    {
+      "N": 3,
+      "matrix_order": 4,
+      "full_Jacobian_rank_mod_101": 15,
+      "target_sl_dimension": 15,
+      "rank_one_square_zero_value": true
+    },
+    {
+      "N": 4,
+      "matrix_order": 5,
+      "full_Jacobian_rank_mod_101": 24,
+      "target_sl_dimension": 24,
+      "rank_one_square_zero_value": true
+    },
+    {
+      "N": 5,
+      "matrix_order": 6,
+      "full_Jacobian_rank_mod_101": 35,
+      "target_sl_dimension": 35,
+      "rank_one_square_zero_value": true
+    }
+  ]
+}

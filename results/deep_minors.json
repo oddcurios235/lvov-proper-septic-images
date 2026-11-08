@@ -1,0 +1,128 @@
+{
+  "prime": 101,
+  "cases": [
+    {
+      "N": 3,
+      "matrix_size": 4,
+      "endpoint_R_det_mod_101": 25,
+      "endpoint_Q_det_mod_101": 76,
+      "normal_shape": [
+        27,
+        9
+      ],
+      "normal_rank_mod_101": 9,
+      "minor_rows_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "selected_normal_minor_det_mod_101": 8,
+      "border_value_column_mod_101": [
+        21,
+        88,
+        86
+      ],
+      "coefficient_degree": 15
+    },
+    {
+      "N": 4,
+      "matrix_size": 5,
+      "endpoint_R_det_mod_101": 4,
+      "endpoint_Q_det_mod_101": 4,
+      "normal_shape": [
+        40,
+        16
+      ],
+      "normal_rank_mod_101": 16,
+      "minor_rows_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        16,
+        17,
+        18,
+        19
+      ],
+      "selected_normal_minor_det_mod_101": 91,
+      "border_value_column_mod_101": [
+        88,
+        84,
+        9,
+        98
+      ],
+      "coefficient_degree": 24
+    },
+    {
+      "N": 5,
+      "matrix_size": 6,
+      "endpoint_R_det_mod_101": 15,
+      "endpoint_Q_det_mod_101": 86,
+      "normal_shape": [
+        55,
+        25
+      ],
+      "normal_rank_mod_101": 25,
+      "minor_rows_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "selected_normal_minor_det_mod_101": 37,
+      "border_value_column_mod_101": [
+        10,
+        20,
+        65,
+        95,
+        27
+      ],
+      "coefficient_degree": 35
+    }
+  ],
+  "sample_transfer": {
+    "N": 7,
+    "t": 1,
+    "R_det_mod_101": 100,
+    "Q_det_mod_101": 1,
+    "normal_rank_mod_101": 49
+  },
+  "degree_Delta_deep": 74,
+  "degree_Q": 2,
+  "degree_Delta_deep_times_Q": 76
+}

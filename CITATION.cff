@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Citation information for the accompanying mathematical manuscript."
+title: "A Zariski-open family of proper septic polynomials with full traceless images"
+authors:
+  - family-names: "Miah"
+    given-names: "Y. T."
+preferred-citation:
+  type: article
+  title: "A Zariski-open family of proper septic polynomials with full traceless images"
+  authors:
+    - family-names: "Miah"
+      given-names: "Y. T."
+  year: 2026

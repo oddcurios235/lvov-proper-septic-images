@@ -1,0 +1,33 @@
+{
+  "basis_count": 1260,
+  "trace_columns": 720,
+  "trace_rank_mod_32003": 211,
+  "trace_rank_over_Q": 211,
+  "formal_trace_kernel_dim_if_W_basis": 1049,
+  "W_word_rank_mod_32003": 1260,
+  "W_sparse_peak": 32,
+  "331": {
+    "rhoW_rank_mod_32003": 18,
+    "rhoV_rank_mod_32003": 15,
+    "trace_plus_rho_rank": 226,
+    "rho_outputs": 140
+  },
+  "2221": {
+    "rhoW_rank_mod_32003": 117,
+    "rhoV_rank_mod_32003": 95,
+    "trace_plus_rho_rank": 306,
+    "rho_outputs": 630
+  },
+  "22111": {
+    "rhoW_rank_mod_32003": 258,
+    "rhoV_rank_mod_32003": 211,
+    "trace_plus_rho_rank": 422,
+    "rho_outputs": 1260
+  },
+  "211111": {
+    "rhoW_rank_mod_32003": 570,
+    "rhoV_rank_mod_32003": 470,
+    "trace_plus_rho_rank": 681,
+    "rho_outputs": 2520
+  }
+}

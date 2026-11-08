@@ -1,0 +1,14 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Original copyrightable manuscript material, repository documentation, citation
+metadata and original finite data/certificates are offered under CC BY 4.0
+where the author holds the relevant rights.
+Copyright (c) 2026 Y. T. Miah.
+
+Canonical licence deed: https://creativecommons.org/licenses/by/4.0/
+Full official legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+This short notice identifies the licence by reference to its official terms;
+it does not replace or modify those terms. When sharing or adapting covered
+material, follow the licence's attribution, licence-link and change-indication
+requirements.

@@ -1,0 +1,48 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{AlbertMuckenhoupt1957}
+A.~A. Albert and Benjamin Muckenhoupt, \emph{On matrices of trace zeros},
+  Michigan Math. J. \textbf{4} (1957), no.~1, 1--3,
+  \href{https://doi.org/10.1307/mmj/1028990168}{\textnormal{doi:10.1307/mmj/1028990168}}.
+
+\bibitem{FagundesKoshlukov2023}
+Pedro Fagundes and Plamen Koshlukov, \emph{Images of multilinear graded
+  polynomials on upper triangular matrix algebras}, Canad. J. Math. \textbf{75}
+  (2023), no.~5, 1540--1565,
+  \href{https://doi.org/10.4153/S0008414X22000438}{\textnormal{doi:10.4153/S0008414X22000438}}.
+
+\bibitem{KBR2016}
+Alexey Kanel-Belov, Sergey Malev, and Louis Rowen, \emph{The images of
+  multilinear polynomials evaluated on {$3\times3$} matrices}, Proc. Amer.
+  Math. Soc. \textbf{144} (2016), no.~1, 7--19,
+  \href{https://doi.org/10.1090/proc/12478}{\textnormal{doi:10.1090/proc/12478}}.
+
+\bibitem{Miah2026}
+Y.~T. Miah, \emph{The {L'vov}--{Kaplansky} conjecture for standard
+  polynomials}, Hexagon preprint
+  \href{https://hexagonmath.org/2611.00184v1}{\textnormal{2611.00184v1}}, 2026,
+  \href{https://doi.org/10.5281/zenodo.24031055}{\textnormal{doi:10.5281/zenodo.24031055}}.
+
+\bibitem{Pan2026}
+Shengyong Pan, \emph{The {L'vov}--{Kaplansky} conjecture for multilinear
+  polynomials of degrees four to six}, Hexagon preprint
+  \href{https://hexagonmath.org/2611.00173v1}{\textnormal{2611.00173v1}}, 2026.
+
+\bibitem{Reutenauer1993}
+Christophe Reutenauer, \emph{Free {Lie} algebras}, London Mathematical Society
+  Monographs, New Series, vol.~7, Oxford University Press, Oxford, 1993,
+  \href{https://doi.org/10.1093/oso/9780198536796.001.0001}{\textnormal{doi:10.1093/oso/9780198536796.001.0001}}.
+
+\bibitem{Tang2026}
+Qiyue Tang, \emph{The {L'vov}--{Kaplansky} conjecture in degrees five and six},
+  aiXiv preprint
+  \href{https://aixiv.online/abs/2611.00692}{\textnormal{2611.00692v1}}, 2026.
+
+\end{thebibliography}

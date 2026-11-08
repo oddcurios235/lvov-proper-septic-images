@@ -1,0 +1,728 @@
+{
+  "prime": 32003,
+  "trace_image_rank": 211,
+  "characters": [
+    {
+      "cycle_type": [
+        7
+      ],
+      "char_W": 0,
+      "char_trace_quotient": 1,
+      "char_V": -1
+    },
+    {
+      "cycle_type": [
+        6,
+        1
+      ],
+      "char_W": 0,
+      "char_trace_quotient": 1,
+      "char_V": -1
+    },
+    {
+      "cycle_type": [
+        5,
+        2
+      ],
+      "char_W": 0,
+      "char_trace_quotient": -1,
+      "char_V": 1
+    },
+    {
+      "cycle_type": [
+        5,
+        1,
+        1
+      ],
+      "char_W": 0,
+      "char_trace_quotient": 1,
+      "char_V": -1
+    },
+    {
+      "cycle_type": [
+        4,
+        3
+      ],
+      "char_W": 0,
+      "char_trace_quotient": -1,
+      "char_V": 1
+    },
+    {
+      "cycle_type": [
+        4,
+        2,
+        1
+      ],
+      "char_W": 0,
+      "char_trace_quotient": 1,
+      "char_V": -1
+    },
+    {
+      "cycle_type": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "char_W": 0,
+      "char_trace_quotient": -1,
+      "char_V": 1
+    },
+    {
+      "cycle_type": [
+        3,
+        3,
+        1
+      ],
+      "char_W": 0,
+      "char_trace_quotient": -5,
+      "char_V": 5
+    },
+    {
+      "cycle_type": [
+        3,
+        2,
+        2
+      ],
+      "char_W": -6,
+      "char_trace_quotient": -1,
+      "char_V": -5
+    },
+    {
+      "cycle_type": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "char_W": 6,
+      "char_trace_quotient": 1,
+      "char_V": 5
+    },
+    {
+      "cycle_type": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "char_W": -18,
+      "char_trace_quotient": -5,
+      "char_V": -13
+    },
+    {
+      "cycle_type": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "char_W": 0,
+      "char_trace_quotient": 1,
+      "char_V": -1
+    },
+    {
+      "cycle_type": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "char_W": 12,
+      "char_trace_quotient": -1,
+      "char_V": 13
+    },
+    {
+      "cycle_type": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "char_W": -120,
+      "char_trace_quotient": -11,
+      "char_V": -109
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "char_W": 1260,
+      "char_trace_quotient": 211,
+      "char_V": 1049
+    }
+  ],
+  "V_decomposition": [
+    {
+      "partition": [
+        4,
+        3
+      ],
+      "dimension": 14,
+      "multiplicity": 3
+    },
+    {
+      "partition": [
+        4,
+        2,
+        1
+      ],
+      "dimension": 35,
+      "multiplicity": 4
+    },
+    {
+      "partition": [
+        4,
+        1,
+        1,
+        1
+      ],
+      "dimension": 20,
+      "multiplicity": 3
+    },
+    {
+      "partition": [
+        3,
+        3,
+        1
+      ],
+      "dimension": 21,
+      "multiplicity": 5
+    },
+    {
+      "partition": [
+        3,
+        2,
+        2
+      ],
+      "dimension": 21,
+      "multiplicity": 5
+    },
+    {
+      "partition": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "dimension": 35,
+      "multiplicity": 10
+    },
+    {
+      "partition": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "dimension": 15,
+      "multiplicity": 5
+    },
+    {
+      "partition": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "dimension": 14,
+      "multiplicity": 6
+    },
+    {
+      "partition": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "dimension": 14,
+      "multiplicity": 5
+    },
+    {
+      "partition": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "dimension": 6,
+      "multiplicity": 3
+    }
+  ],
+  "common_kernel": {
+    "331": {
+      "common_kernel_dim": 762,
+      "H_size": 36,
+      "components": [
+        {
+          "partition": [
+            4,
+            3
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 14,
+          "H_fixed_dimension": 2
+        },
+        {
+          "partition": [
+            4,
+            2,
+            1
+          ],
+          "multiplicity_in_V": 4,
+          "degree": 35,
+          "H_fixed_dimension": 1
+        },
+        {
+          "partition": [
+            4,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 20,
+          "H_fixed_dimension": 0
+        },
+        {
+          "partition": [
+            3,
+            3,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 21,
+          "H_fixed_dimension": 1
+        },
+        {
+          "partition": [
+            3,
+            2,
+            2
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 21,
+          "H_fixed_dimension": 0
+        },
+        {
+          "partition": [
+            3,
+            2,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 10,
+          "degree": 35,
+          "H_fixed_dimension": 0
+        },
+        {
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 15,
+          "H_fixed_dimension": 0
+        },
+        {
+          "partition": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "multiplicity_in_V": 6,
+          "degree": 14,
+          "H_fixed_dimension": 0
+        },
+        {
+          "partition": [
+            2,
+            2,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 14,
+          "H_fixed_dimension": 0
+        },
+        {
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 6,
+          "H_fixed_dimension": 0
+        }
+      ]
+    },
+    "2221": {
+      "common_kernel_dim": 163,
+      "H_size": 8,
+      "components": [
+        {
+          "partition": [
+            4,
+            3
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 14,
+          "H_fixed_dimension": 4
+        },
+        {
+          "partition": [
+            4,
+            2,
+            1
+          ],
+          "multiplicity_in_V": 4,
+          "degree": 35,
+          "H_fixed_dimension": 6
+        },
+        {
+          "partition": [
+            4,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 20,
+          "H_fixed_dimension": 1
+        },
+        {
+          "partition": [
+            3,
+            3,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 21,
+          "H_fixed_dimension": 3
+        },
+        {
+          "partition": [
+            3,
+            2,
+            2
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 21,
+          "H_fixed_dimension": 3
+        },
+        {
+          "partition": [
+            3,
+            2,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 10,
+          "degree": 35,
+          "H_fixed_dimension": 2
+        },
+        {
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 15,
+          "H_fixed_dimension": 0
+        },
+        {
+          "partition": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "multiplicity_in_V": 6,
+          "degree": 14,
+          "H_fixed_dimension": 1
+        },
+        {
+          "partition": [
+            2,
+            2,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 14,
+          "H_fixed_dimension": 0
+        },
+        {
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 6,
+          "H_fixed_dimension": 0
+        }
+      ]
+    },
+    "22111": {
+      "common_kernel_dim": 18,
+      "H_size": 4,
+      "components": [
+        {
+          "partition": [
+            4,
+            3
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 14,
+          "H_fixed_dimension": 6
+        },
+        {
+          "partition": [
+            4,
+            2,
+            1
+          ],
+          "multiplicity_in_V": 4,
+          "degree": 35,
+          "H_fixed_dimension": 11
+        },
+        {
+          "partition": [
+            4,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 20,
+          "H_fixed_dimension": 4
+        },
+        {
+          "partition": [
+            3,
+            3,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 21,
+          "H_fixed_dimension": 6
+        },
+        {
+          "partition": [
+            3,
+            2,
+            2
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 21,
+          "H_fixed_dimension": 5
+        },
+        {
+          "partition": [
+            3,
+            2,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 10,
+          "degree": 35,
+          "H_fixed_dimension": 6
+        },
+        {
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 15,
+          "H_fixed_dimension": 1
+        },
+        {
+          "partition": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "multiplicity_in_V": 6,
+          "degree": 14,
+          "H_fixed_dimension": 2
+        },
+        {
+          "partition": [
+            2,
+            2,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 14,
+          "H_fixed_dimension": 1
+        },
+        {
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 6,
+          "H_fixed_dimension": 0
+        }
+      ]
+    },
+    "211111": {
+      "common_kernel_dim": 0,
+      "H_size": 2,
+      "components": [
+        {
+          "partition": [
+            4,
+            3
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 14,
+          "H_fixed_dimension": 9
+        },
+        {
+          "partition": [
+            4,
+            2,
+            1
+          ],
+          "multiplicity_in_V": 4,
+          "degree": 35,
+          "H_fixed_dimension": 20
+        },
+        {
+          "partition": [
+            4,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 20,
+          "H_fixed_dimension": 10
+        },
+        {
+          "partition": [
+            3,
+            3,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 21,
+          "H_fixed_dimension": 11
+        },
+        {
+          "partition": [
+            3,
+            2,
+            2
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 21,
+          "H_fixed_dimension": 10
+        },
+        {
+          "partition": [
+            3,
+            2,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 10,
+          "degree": 35,
+          "H_fixed_dimension": 15
+        },
+        {
+          "partition": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 15,
+          "H_fixed_dimension": 5
+        },
+        {
+          "partition": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "multiplicity_in_V": 6,
+          "degree": 14,
+          "H_fixed_dimension": 5
+        },
+        {
+          "partition": [
+            2,
+            2,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 5,
+          "degree": 14,
+          "H_fixed_dimension": 4
+        },
+        {
+          "partition": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "multiplicity_in_V": 3,
+          "degree": 6,
+          "H_fixed_dimension": 1
+        }
+      ]
+    }
+  }
+}
