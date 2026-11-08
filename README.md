@@ -15,7 +15,7 @@ $$
 
 These are equalities of sets of **individual evaluations**. The coefficient space consists of proper multilinear degree-seven polynomials in the third power of the commutator ideal, with vanishing formal cyclic trace and annihilation under *every* repeated-input assignment of multiplicities $(3,3,1)$.
 
-The argument combines symmetric-group representation calculations, explicit finite determinant witnesses, a size-transfer argument and a separate treatment of $3\times3$ matrices. It builds on matrix-image work of Kanel-Belov, Malev and Rowen, image criteria of Fagundes and Koshlukov, results of Pan and Tang, and Miah’s distinct, [previously published standard-polynomial paper](https://hexagonmath.org/2611.00184v1). The explicit polynomial $q_0$ witnesses nonemptiness of the open set; the full-image property of that individual polynomial also follows from Pan’s degree-six actual-image theorem and the classical single-commutator theorem.
+The argument combines symmetric-group representation calculations, explicit finite determinant witnesses, a size-transfer argument and a separate treatment of `3×3` matrices. It draws on matrix-image work of Kanel-Belov, Malev and Rowen, results of Pan, and border methods from [Miah’s paper on standard-polynomial images](https://hexagonmath.org/2611.00184v1). Related work includes Tang’s results and the graded-image criteria of Fagundes and Koshlukov. The explicit polynomial `q0` witnesses nonemptiness of the open set; the full-image property of that individual polynomial also follows from Pan’s degree-six actual-image theorem and the classical single-commutator theorem.
 
 ## Files
 
